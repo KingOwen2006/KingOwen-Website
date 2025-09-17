@@ -10,7 +10,6 @@
     box-sizing: border-box;
     justify-content: flex-start;
     gap: 25px;
-    top: 12.5%;
 }
 
 .introtext {
@@ -18,7 +17,6 @@
     max-width: 1140px;
     position: relative;
     display: inline-block;
-    margin-bottom: 20px;
 }
 
 .week {
@@ -40,16 +38,6 @@
     gap: 9px;
     text-align: left;
     justify-content: space-between;
-}
-
-.preview {
-    align-self: stretch;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 10px;
-    flex-direction: row;
 }
 
 .card {
