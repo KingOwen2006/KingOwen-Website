@@ -4,24 +4,36 @@ html,body {
 	overflow: hidden;
 }
 
+body {
+	/* Full-page background behind navbar and content */
+	background-image: url('Icons/NoiseFrame (1).png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.page {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	align-items: stretch;
+}
+
 .homeframe {
 	text-align: center;
 	font-size: 40px;
 	color: #fff;
 	font-family: 'Istok Web', sans-serif;
+	position: relative;
+	flex: 1 1 auto;
 	height: 100%;
 }
 
-.noiseframe {
-	background: linear-gradient(116.82deg, #4e7ba4, #23384c);
-	width: 100vw;
-	height: 100vh;
-}
+.noiseframe { display: none; }
 
 .navbar {
-	position: fixed;
-	top: 20%;
-	left: 0px;
+	position: relative;
+	align-self: center;
 	box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3) inset, 0px 4px 4px rgba(255, 255, 255, 0.25) inset, 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
 	backdrop-filter: blur(10px);
 	border-radius: 0px 35px 35px 0px;
@@ -55,6 +67,7 @@ html,body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+    text-decoration: none;
 }
 
 .tooltip {
