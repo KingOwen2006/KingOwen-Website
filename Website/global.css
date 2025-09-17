@@ -1,0 +1,80 @@
+html,body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+.homeframe {
+	text-align: center;
+	font-size: 40px;
+	color: #fff;
+	font-family: 'Istok Web', sans-serif;
+	height: 100%;
+}
+
+.noiseframe {
+	background: linear-gradient(116.82deg, #4e7ba4, #23384c);
+	width: 100vw;
+	height: 100vh;
+}
+
+.navbar {
+	position: fixed;
+	top: 20%;
+	left: 0px;
+	box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3) inset, 0px 4px 4px rgba(255, 255, 255, 0.25) inset, 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+	backdrop-filter: blur(10px);
+	border-radius: 0px 35px 35px 0px;
+	background-color: rgba(255, 255, 255, 0.01);
+	width: 100px;
+	height: 495px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	box-sizing: border-box;
+	gap: 25px;
+}
+
+.navbar:hover {
+	backdrop-filter: blur(6px);
+	background-color: rgba(255, 255, 255, 0.075);
+	transition: all 0.3s ease;
+}
+
+.nav-icons {
+	width: 70px;
+	position: relative;
+	height: 70px;
+	object-fit: cover;
+}
+
+.nav-item {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tooltip {
+	position: absolute;
+	left: 150%;
+	top: 50%;
+	transform: translateY(-50%);
+	box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3) inset, 0px 4px 4px rgba(255, 255, 255, 0.25) inset, 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+	background-color: rgba(255, 255, 255, 0.01);
+	color: #fff;
+	padding: 6px 10px;
+	border-radius: 5px;
+	font-size: 14px;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nav-item:hover .tooltip {
+	opacity: 1;
+	transform: translateY(-50%) translateX(5px);
+}
