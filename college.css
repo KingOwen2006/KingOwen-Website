@@ -10,6 +10,10 @@
     box-sizing: border-box;
     justify-content: flex-start;
     gap: 25px;
+<<<<<<< HEAD
+=======
+    top: 12.5%;
+>>>>>>> 2350f1a (Resolve merge conflicts in college.html; update week1.css image sizing and layout)
 }
 
 .introtext {
@@ -17,6 +21,10 @@
     max-width: 1140px;
     position: relative;
     display: inline-block;
+<<<<<<< HEAD
+=======
+    margin-bottom: 20px;
+>>>>>>> 2350f1a (Resolve merge conflicts in college.html; update week1.css image sizing and layout)
 }
 
 .week {
@@ -40,6 +48,19 @@
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
+=======
+.preview {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    flex-direction: row;
+}
+
+>>>>>>> 2350f1a (Resolve merge conflicts in college.html; update week1.css image sizing and layout)
 .card {
     display: flex;
     flex-direction: column;
@@ -104,4 +125,8 @@
     height: 50px;
     border-radius: 25px;
     object-fit: contain;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2350f1a (Resolve merge conflicts in college.html; update week1.css image sizing and layout)

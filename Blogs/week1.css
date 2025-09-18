@@ -39,9 +39,9 @@
   	gap: 9px;
 }
 .preview {
-  	align-self: center;
-  	display: flex;
-  	align-items: flex-start;
+	align-self: stretch;
+	display: flex;
+	align-items: flex-start;
 }
 .week-1 {
   	width: 1052px;
