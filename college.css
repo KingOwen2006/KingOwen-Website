@@ -10,6 +10,7 @@
     box-sizing: border-box;
     justify-content: flex-start;
     gap: 25px;
+    top: 12.5%;
 }
 
 .introtext {
@@ -105,3 +106,4 @@
     border-radius: 25px;
     object-fit: contain;
 }
+
