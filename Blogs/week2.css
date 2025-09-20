@@ -74,12 +74,19 @@
 }
 
 .image-2-icon {
+  	width: 203px;
+  	border-radius: 35px;
+  	height: 183px;
+  	object-fit: cover;
+}
+
+/* .image-2-icon {
   	width: 300px;
   	height: auto;
   	border-radius: 15px;
   	object-fit: contain;
   	margin-top: 15px;
-}
+} */
 
 .searchframe {
     position: absolute;
