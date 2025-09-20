@@ -1,26 +1,27 @@
 .noiseframe {
-  	top: 0;
-  	left: 0;
-  	width: 100%;
-  	height: 100%;
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
   	background: linear-gradient(116.82deg, #4e7ba4, #23384c);
+  	width: 1440px;
+  	height: 1024px;
+  	overflow: hidden;
 }
 
-/* ===== MAIN CONTAINER ===== */
 .mainframe {
-    position: relative;
-    margin: 100px auto 50px auto; /* center content */
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    right: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
+    justify-content: flex-start;
     gap: 25px;
-    width: 100%;
-    max-width: 1200px;
 }
 
-/* ===== CONTENT CARD ===== */
 .week2 {
   	width: 100%;
   	max-width: 1000px;
@@ -44,7 +45,6 @@
   	line-height: 1.6;
 }
 
-/* ===== TITLE ===== */
 .preview {
   	align-self: center;
   	display: flex;
@@ -60,7 +60,6 @@
   	color: #ffffff;
 }
 
-/* ===== TEXT SECTIONS ===== */
 .in-week-2-our-course-was-being-parent {
   	display: flex;
   	flex-direction: column;
@@ -73,15 +72,13 @@
   	display: flex;
   	flex-direction: column;
   	gap: 15px;
-  	max-width: 900px;   /* keeps text comfortably wrapped */
+  	max-width: 900px;  
 }
 
-/* Paragraph spacing */
 .blank-line {
   	margin: 0 0 10px 0;
 }
 
-/* ===== LISTS ===== */
 .made-a-lighting-room-lighting {
   	margin: 0;
   	padding-left: 32px;
@@ -89,10 +86,9 @@
 }
 
 .made-a-lighting {
-  	margin-bottom: 6px;
+  	margin-bottom: 0px;
 }
 
-/* ===== IMAGE STYLE ===== */
 .image-2-icon {
   	width: 300px;
   	height: auto;
@@ -101,28 +97,28 @@
   	margin-top: 15px;
 }
 
-/* ===== SEARCH BAR ===== */
 .searchframe {
     position: absolute;
     top: 15px;
     right: 25px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) inset,
-                0px 4px 4px rgba(255, 255, 255, 0.25) inset,
-                0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) inset, 0px 4px 4px rgba(255, 255, 255, 0.25) inset, 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
     backdrop-filter: blur(4px);
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.01);
     width: 341px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 3px 0px;
     box-sizing: border-box;
-    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    color: rgba(255, 255, 255, 0.35);
 }
 
 .search {
     width: 260px;
+    position: relative;
     display: inline-block;
     height: 50px;
     flex-shrink: 0;
@@ -135,23 +131,22 @@
     object-fit: contain;
 }
 
-/* ===== BACK BUTTON ===== */
 .backframe {
     position: absolute;
     top: 15px;
     left: 25px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) inset,
-                0px 4px 4px rgba(255, 255, 255, 0.25) inset,
-                0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) inset, 0px 4px 4px rgba(255, 255, 255, 0.25) inset, 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
     backdrop-filter: blur(4px);
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.01);
     width: 175px;
+    overflow: hidden;
     display: flex;
     justify-content: right;
     padding: 3px 0px;
     box-sizing: border-box;
-    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    color: rgba(255, 255, 255, 0.35);
 }
 
 .back {
