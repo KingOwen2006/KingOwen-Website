@@ -141,6 +141,6 @@
     height: 50px;
     flex-shrink: 0;
     right: 25px;
+    font-weight: bold;
+    text-decoration: none;
 }
-
-
