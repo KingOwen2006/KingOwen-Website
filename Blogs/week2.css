@@ -1,84 +1,170 @@
+/* ===== BACKGROUND ===== */
 .noiseframe {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
+  	position: fixed; /* covers entire screen */
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
   	background: linear-gradient(116.82deg, #4e7ba4, #23384c);
-  	width: 1440px;
-  	height: 3168px;
-  	overflow: hidden;
+  	z-index: -1; /* stays behind everything */
 }
+
+/* ===== MAIN CONTAINER ===== */
 .mainframe {
-  	position: absolute;
-  	top: 188px;
-  	left: 100px;
-  	width: 1315px;
-  	height: 2980px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	padding: 10px;
-  	box-sizing: border-box;
+    position: relative;
+    margin: 100px auto 50px auto; /* center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
 }
-.week1 {
-  	align-self: stretch;
-  	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) inset, 0px 4px 4px rgba(255, 255, 255, 0.25) inset, 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
-  	backdrop-filter: blur(4px);
+
+/* ===== CONTENT CARD ===== */
+.week2 {
+  	width: 100%;
+  	max-width: 1000px;
+  	min-height: 600px;
+
+  	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) inset,
+                0px 4px 4px rgba(255, 255, 255, 0.25) inset,
+                0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+  	backdrop-filter: blur(6px);
   	border-radius: 25px;
-  	background-color: rgba(255, 255, 255, 0.01);
-  	height: 2911px;
-  	overflow: hidden;
-  	flex-shrink: 0;
+  	background-color: rgba(255, 255, 255, 0.05);
+
   	display: flex;
   	flex-direction: column;
-  	align-items: flex-start;
-  	padding: 4px 25px;
+  	padding: 30px;
   	box-sizing: border-box;
-  	gap: 9px;
+  	gap: 20px;
+
+  	color: #f5f5f5;
+  	font-size: 18px;
+  	line-height: 1.6;
 }
+
+/* ===== TITLE ===== */
 .preview {
-  	align-self: stretch;
+  	align-self: center;
   	display: flex;
-  	align-items: flex-start;
+  	justify-content: center;
+  	width: 100%;
 }
+
 .week-2 {
-  	width: 1052px;
-  	position: relative;
-  	display: inline-block;
-  	height: 48px;
-  	flex-shrink: 0;
-}
-.in-week-2-our-course-was-being-parent {
-  	width: 1270px;
-  	height: 2846px;
-  	display: flex;
-  	align-items: flex-start;
-  	gap: 9px;
-  	font-size: 24px;
-}
-.in-week-2-container {
-  	width: 1029px;
-  	position: relative;
-  	display: inline-block;
-  	height: 2846px;
-  	flex-shrink: 0;
-}
-.blank-line {
+  	font-size: 40px;
+  	font-weight: bold;
+  	text-align: center;
   	margin: 0;
+  	color: #ffffff;
 }
+
+/* ===== TEXT SECTIONS ===== */
+.in-week-2-our-course-was-being-parent {
+  	display: flex;
+  	flex-direction: column;
+  	gap: 15px;
+  	width: 100%;
+  	align-items: flex-start;
+}
+
+.in-week-2-container {
+  	display: flex;
+  	flex-direction: column;
+  	gap: 15px;
+  	max-width: 900px;   /* keeps text comfortably wrapped */
+}
+
+/* Paragraph spacing */
+.blank-line {
+  	margin: 0 0 10px 0;
+}
+
+/* ===== LISTS ===== */
 .made-a-lighting-room-lighting {
   	margin: 0;
-  	font-family: inherit;
-  	font-size: inherit;
   	padding-left: 32px;
+  	list-style-type: disc;
 }
+
 .made-a-lighting {
-  	margin-bottom: 0px;
+  	margin-bottom: 6px;
 }
+
+/* ===== IMAGE STYLE ===== */
 .image-2-icon {
-  	width: 203px;
-  	position: relative;
-  	border-radius: 35px;
-  	max-height: 100%;
-  	object-fit: cover;
+  	width: 300px;
+  	height: auto;
+  	border-radius: 15px;
+  	object-fit: contain;
+  	margin-top: 15px;
+}
+
+/* ===== SEARCH BAR ===== */
+.searchframe {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) inset,
+                0px 4px 4px rgba(255, 255, 255, 0.25) inset,
+                0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+    backdrop-filter: blur(4px);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 341px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0px;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search {
+    width: 260px;
+    display: inline-block;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.searchimg-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    object-fit: contain;
+}
+
+/* ===== BACK BUTTON ===== */
+.backframe {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) inset,
+                0px 4px 4px rgba(255, 255, 255, 0.25) inset,
+                0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+    backdrop-filter: blur(4px);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 175px;
+    display: flex;
+    justify-content: right;
+    padding: 3px 0px;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.back {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    flex-shrink: 0;
+    right: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
 }
