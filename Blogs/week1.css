@@ -128,8 +128,7 @@
     width: 341px;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: right;
     padding: 3px 0px;
     box-sizing: border-box;
     text-align: left;
@@ -142,4 +141,6 @@
     display: inline-block;
     height: 50px;
     flex-shrink: 0;
+    right: 25px;
 }
+
