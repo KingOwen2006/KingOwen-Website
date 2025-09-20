@@ -18,7 +18,7 @@
   	backdrop-filter: blur(4px);
   	border-radius: 25px;
   	background-color: rgba(255, 255, 255, 0.01);
-  	height: 807px;
+  	height: autopx;
   	overflow: hidden;
   	flex-shrink: 0;
   	display: flex;
