@@ -27,7 +27,17 @@ body {
 	height: 100%;
 }
 
-.noiseframe { display: none; }
+.noiseframe {
+  	position: fixed;   /* instead of absolute */
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	background: linear-gradient(116.82deg, #4e7ba4, #23384c);
+  	width: 100%;
+  	height: 100%;
+}
+
 
 .navbar {
 	position: relative;
@@ -89,6 +99,7 @@ body {
 	opacity: 1;
 	transform: translateY(-50%) translateX(5px);
 }
+
 
 
 
