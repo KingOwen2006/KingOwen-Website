@@ -7,6 +7,7 @@
   	height: 1024px;
   	overflow: hidden;
 }
+
 .mainframe {
     position: absolute;
     left: 100px;
@@ -20,7 +21,6 @@
     justify-content: flex-start;
     gap: 25px;
 }
-
 
 .week1 {
   	align-self: stretch;
@@ -50,6 +50,7 @@
   	height: 48px;
   	flex-shrink: 0;
 }
+
 .in-my-first-week-of-college-i-parent {
   	align-self: stretch;
   	display: flex;
@@ -58,6 +59,7 @@
   	font-size: 24px;
   	text-align: left;
 }
+
 .in-my-first-container {
   	flex: 1;
   	position: relative;
@@ -146,4 +148,5 @@
     font-family: inherit;
     color: inherit;
 }
+
 
