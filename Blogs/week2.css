@@ -1,14 +1,3 @@
-.week2 {
-  	width: 100%;
-  	position: relative;
-  	background-color: #476f94;
-  	height: 3168px;
-  	overflow: hidden;
-  	text-align: left;
-  	font-size: 40px;
-  	color: #fff;
-  	font-family: 'Istok Web';
-}
 .noiseframe {
   	position: absolute;
   	top: 0px;
