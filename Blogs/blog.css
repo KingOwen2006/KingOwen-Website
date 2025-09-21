@@ -85,6 +85,8 @@
   	border-radius: 35px;
   	height: 183px;
   	object-fit: cover;
+    position: relative;
+    left: 80%;
 }
 
 .searchframe {
@@ -149,4 +151,5 @@
     text-decoration: none;
     font-family: inherit;
     color: inherit;
+
 }
