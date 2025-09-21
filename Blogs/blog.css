@@ -10,6 +10,7 @@
   box-sizing: border-box;
   justify-content: flex-start;
   gap: 25px;
+  z-index: -1;
 }
 
 .heading {
@@ -143,3 +144,4 @@
   font-family: inherit;
   color: inherit;
 }
+
