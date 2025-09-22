@@ -11,6 +11,7 @@
   justify-content: flex-start;
   gap: 25px;
   z-index: -1;
+  margin: 0 8%;
 }
 
 .heading {
@@ -144,4 +145,5 @@
   font-family: inherit;
   color: inherit;
 }
+
 
