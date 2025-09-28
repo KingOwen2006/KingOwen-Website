@@ -41,6 +41,7 @@
 .liquid-glass-effect:hover {
 	backdrop-filter: blur(6px);
 	background-color: rgba(255, 255, 255, 0.05);
+	transform: scale(1.1);
 	transition: all 0.3s ease;
 }
 
@@ -58,3 +59,4 @@
 	height: auto;
 	z-index: 1;
 }
+
