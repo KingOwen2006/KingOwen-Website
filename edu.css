@@ -1,41 +1,14 @@
-html,body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #000, #1D2838);
-}
-
-@media only screen {
-  body {
-    margin: 2em auto;
-    max-width: 1200px;
-  }
-}
-
-body {
-  line-height: 1.5;
-  white-space: pre-wrap;
-}
-
 a,
 a.visited {
   color: inherit;
   text-decoration: none;
 }
 
-h1,
-h2,
-h3 {
+h1,h2,h3 {
   letter-spacing: -0.01em;
   line-height: 1.2;
   font-weight: 600;
   margin-bottom: 0;
-}
-
-.page-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 0.75em;
 }
 
 h1 {
@@ -89,35 +62,6 @@ h3 {
   justify-content: center;
 }
 
-/* === LINK CARDS === */
-.link-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 10px;
-  padding: 1em;
-  background: rgba(255, 255, 255, 0.05);
-  transition: all 0.25s ease;
-  font-weight: 600;
-  font-size: 1rem;
-  width: 100%;
-  min-height: 80px;
-}
-
-.link-card a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.link-card:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.12);
-}
-
 /* === ICONS === */
 .icon {
   display: inline-flex;
@@ -137,10 +81,17 @@ h3 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 3px 0px;
   width: 100%;
   box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  padding-left: 20px;
+  height: 50px;
 }
 
 .link-card:hover {
