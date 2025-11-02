@@ -1,0 +1,172 @@
+/* === GLOBAL ELEMENTS === */
+.logo-icon {
+  margin: auto;
+  top: 35px;
+  position: relative;
+}
+
+/* === CONTAINER STYLES (formerly "liquid glass") === */
+.liquid-glass-effect,
+.liquid-glass-effect2 {
+  background-color: rgba(34, 45, 63, 0.9); /* dark flat blue-gray */
+  border-radius: 18px;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.liquid-glass-effect3 {
+  background-color: rgba(34, 45, 63, 0.9); /* dark flat blue-gray */
+  border-radius: 18px;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Layout variations */
+.liquid-glass-effect {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.liquid-glass-effect2 {
+  flex-direction: row;
+  align-items: center;
+}
+
+.liquid-glass-effect3 {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === HOVER STATES === */
+.liquid-glass-effect:hover,
+.liquid-glass-effect2:hover,
+.liquid-glass-effect3:hover {
+  background-color: rgba(56, 70, 98, 0.8);
+  transform: scale(1.02);
+  border-color: rgba(90, 167, 255, 0.35);
+  box-shadow: 0 0 14px rgba(90, 167, 255, 0.25);
+}
+
+/* === TYPOGRAPHY === */
+.name {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  padding: 10px 20px;
+  text-align: center;
+  color: #f4f7fa;
+}
+
+.heading {
+  font-size: 34px;
+  font-weight: 600;
+  margin: 0;
+  padding: 10px 20px;
+  color: #e8ebf0;
+}
+
+.bigtext {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #cfd8e3;
+  transition: color 0.3s ease;
+}
+
+.bigtext:hover {
+  color: #ffffff;
+}
+
+.smalltext {
+  font-size: 18px;
+  opacity: 0.6;
+  margin: 0;
+  padding: 4px 20px;
+  position: sticky;
+  bottom: 15px;
+  text-decoration: none;
+  color: #a3adc2;
+}
+
+/* === LINKS === */
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* === ICONS === */
+.icon {
+  width: 36px;
+  height: auto;
+  padding: 10px 20px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* === TEXT GROUPING === */
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #e8ebf0;
+}
+
+/* === HEADINGS === */
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 1.875rem;
+  margin-top: 1.875rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  color: #fff;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+/* === UNIT GRID === */
+.unit-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 4 columns */
+  gap: 1.5em;
+  justify-items: center;
+  align-items: start;
+  margin-bottom: 2em;
+}
+
+/* individual unit boxes */
+.column {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
