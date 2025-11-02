@@ -1,0 +1,79 @@
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  background-color: rgba(30, 41, 59, 0.9); /* Samsung dark card background */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  color: #e8ebf0;
+  line-height: 1.6;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+.page-section {
+  margin-bottom: 3em;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: #f2f5fa;
+}
+
+.subsection-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #e8ebf0;
+}
+
+.section-text {
+  font-size: 1rem;
+  margin-bottom: 1em;
+  color: #cfd8e3;
+}
+
+.section-divider {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1em;
+}
+
+.source-figure {
+  margin-bottom: 1em;
+}
+
+.source-link {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.source-link:hover {
+  color: #4f46e5;
+}
+
+.section-list {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+
+.section-list li {
+  margin-bottom: 0.75em;
+}
+
+.image-gallery-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.image-gallery-vertical img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
