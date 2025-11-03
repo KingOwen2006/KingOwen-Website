@@ -149,7 +149,7 @@ h3 {
 /* === UNIT GRID === */
 .unit-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(1em, 2vw, 1.5em);
   justify-items: center;
   align-items: start;
@@ -246,4 +246,5 @@ h3 {
     padding: 30px 20px;
   }
 }
+
 
