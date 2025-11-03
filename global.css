@@ -6,7 +6,7 @@ html, body {
   font-family: 'Inter', 'Roboto', 'SamsungOne', sans-serif;
   background: linear-gradient(180deg, #0b0f16 0%, #0f1623 100%);
   color: #e8ebf0;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -14,7 +14,7 @@ html, body {
 
 /* === SIDENAV CONTAINER === */
 .navbar {
-  position: fixed;
+  position: scroll;
   top: 50%;
   transform: translateY(-50%);
   width: 230px;
@@ -186,7 +186,7 @@ html, body {
 /* === MOBILE RESPONSIVE === */
 @media (max-width: 768px) {
   .navbar {
-    position: fixed;
+    position: scroll;
     top: 0;
     left: 0;
     transform: none;
@@ -223,3 +223,4 @@ html, body {
     padding: 18px;
   }
 }
+
