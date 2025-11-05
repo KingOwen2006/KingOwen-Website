@@ -1,21 +1,32 @@
+/* === GLOBAL ELEMENTS === */
 .logo-icon {
   margin: auto;
   top: 35px;
   position: relative;
-  width: clamp(60px, 8vw, 100px);
-  height: auto;
 }
 
-/* === CONTAINER STYLES (LIQUID GLASS) === */
+/* === CONTAINER STYLES (formerly "liquid glass") === */
 .liquid-glass-effect,
-.liquid-glass-effect2,
-.liquid-glass-effect3 {
-  background-color: rgba(34, 45, 63, 0.9);
+.liquid-glass-effect2 {
+  background-color: rgba(34, 45, 63, 0.9); /* dark flat blue-gray */
   border-radius: 18px;
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  padding: clamp(12px, 2vw, 20px) 0;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.liquid-glass-effect3 {
+  background-color: rgba(34, 45, 63, 0.9); /* dark flat blue-gray */
+  border-radius: 18px;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  padding: 20px 0;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
@@ -30,14 +41,11 @@
 .liquid-glass-effect2 {
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
 }
 
 .liquid-glass-effect3 {
   flex-direction: column;
   align-items: center;
-  height: clamp(180px, 30vh, 240px);
-  padding: clamp(16px, 3vw, 24px) 0;
 }
 
 /* === HOVER STATES === */
@@ -52,7 +60,7 @@
 
 /* === TYPOGRAPHY === */
 .name {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: 40px;
   font-weight: 700;
   margin: 0;
   padding: 10px 20px;
@@ -61,7 +69,7 @@
 }
 
 .heading {
-  font-size: clamp(1.6rem, 2.5vw, 2.125rem);
+  font-size: 34px;
   font-weight: 600;
   margin: 0;
   padding: 10px 20px;
@@ -69,7 +77,7 @@
 }
 
 .bigtext {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-size: 20px;
   font-weight: 500;
   margin: 0;
   padding: 10px 20px;
@@ -83,7 +91,7 @@
 }
 
 .smalltext {
-  font-size: clamp(0.9rem, 1vw, 1.125rem);
+  font-size: 18px;
   opacity: 0.6;
   margin: 0;
   padding: 4px 20px;
@@ -102,7 +110,7 @@ a:visited {
 
 /* === ICONS === */
 .icon {
-  width: clamp(28px, 3vw, 36px);
+  width: 36px;
   height: auto;
   padding: 10px 20px;
   opacity: 0.85;
@@ -131,26 +139,26 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  font-size: 1.875rem;
   margin-top: 1.875rem;
 }
 
 h2 {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: 1.5rem;
   margin-top: 2.5rem;
-  color: #ffffff;
+  color: #fff;
 }
 
 h3 {
-  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  font-size: 1.25rem;
   margin-top: 1.25rem;
 }
 
 /* === UNIT GRID === */
 .unit-links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(1em, 2vw, 1.5em);
+  grid-template-columns: repeat(2, 1fr); /* 4 columns */
+  gap: 1.5em;
   justify-items: center;
   align-items: start;
   margin-bottom: 2em;
@@ -162,89 +170,3 @@ h3 {
   display: flex;
   justify-content: center;
 }
-
-/* === PAGE WRAPPER === */
-.page-container {
-  width: 90vw;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: clamp(40px, 5vw, 60px) clamp(20px, 4vw, 40px);
-  background-color: rgba(30, 41, 59, 0.9);
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  color: #e8ebf0;
-  line-height: 1.6;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-/* === FIT-TO-SCREEN (DESKTOP) === */
-@media (min-width: 1200px) {
-  html, body {
-    height: 100%;
-    overflow-x: hidden;
-  }
-
-  .page-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .liquid-glass-effect,
-  .liquid-glass-effect2,
-  .liquid-glass-effect3 {
-    justify-content: center;
-  }
-}
-
-/* === TABLET === */
-@media (max-width: 1199px) and (min-width: 769px) {
-  .liquid-glass-effect2 {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .page-container {
-    width: 92vw;
-    padding: 50px 30px;
-  }
-}
-
-/* === MOBILE === */
-@media (max-width: 768px) {
-  .liquid-glass-effect,
-  .liquid-glass-effect2,
-  .liquid-glass-effect3 {
-    padding: 16px 0;
-    border-radius: 14px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .unit-links {
-    grid-template-columns: 1fr;
-    gap: 1em;
-  }
-
-  .name {
-    font-size: 1.8rem;
-  }
-
-  .heading {
-    font-size: 1.4rem;
-  }
-
-  .bigtext {
-    font-size: 1rem;
-  }
-
-  .page-container {
-    width: 95vw;
-    padding: 30px 20px;
-  }
-}
-
-
