@@ -1,22 +1,38 @@
-/* ====== Base Page Container ====== */
 .page-container {
-  width: 90vw; /* responsive width */
   max-width: 1100px;
   margin: 0 auto;
-  padding: clamp(40px, 5vw, 60px) clamp(20px, 4vw, 40px);
+  padding: 60px 40px;
   background-color: rgba(30, 41, 59, 0.9); /* Samsung dark card background */
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   color: #e8ebf0;
   line-height: 1.6;
   font-family: 'Inter', 'Roboto', sans-serif;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 
-/* ====== Section Layout ====== */
 .page-section {
   margin-bottom: 3em;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: #f2f5fa;
+}
+
+.subsection-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #e8ebf0;
+}
+
+.section-text {
+  font-size: 1rem;
+  margin-bottom: 1em;
+  color: #cfd8e3;
 }
 
 .section-divider {
@@ -25,29 +41,19 @@
   margin-bottom: 1em;
 }
 
-/* ====== Typography ====== */
-.section-title {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 700;
-  margin-bottom: 0.5em;
-  color: #f2f5fa;
-}
-
-.subsection-title {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  color: #e8ebf0;
-}
-
-.section-text {
-  font-size: clamp(0.95rem, 1.2vw, 1rem);
+.source-figure {
   margin-bottom: 1em;
-  color: #cfd8e3;
 }
 
-/* ====== Lists ====== */
+.source-link {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.source-link:hover {
+  color: #4f46e5;
+}
+
 .section-list {
   list-style-type: disc;
   padding-left: 2em;
@@ -58,72 +64,16 @@
   margin-bottom: 0.75em;
 }
 
-/* ====== Links ====== */
-.source-link {
-  color: #60a5fa;
-  text-decoration: underline;
-  transition: color 0.2s ease;
-}
-
-.source-link:hover {
-  color: #4f46e5;
-}
-
-/* ====== Images ====== */
-.source-figure {
-  margin-bottom: 1em;
-}
-
 .image-gallery-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .image-gallery-vertical img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-}
-
-/* ====== Fit-to-Screen (Desktop Behavior) ====== */
-@media (min-width: 1200px) {
-  html, body {
-    height: 100%;
-    overflow-x: hidden;
-  }
-
-  .page-container {
-    min-height: 100vh; /* fill the screen height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertically center content */
-  }
-}
-
-/* ====== Tablet and Small Desktop ====== */
-@media (max-width: 1199px) and (min-width: 769px) {
-  .page-container {
-    width: 92vw;
-    padding: 50px 30px;
-  }
-}
-
-/* ====== Mobile ====== */
-@media (max-width: 768px) {
-  .page-container {
-    width: 95vw;
-    padding: 30px 20px;
-    border-radius: 12px;
-  }
-
-  .section-title {
-    font-size: 1.6rem;
-  }
-
-  .subsection-title {
-    font-size: 1.25rem;
-  }
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
