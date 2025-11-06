@@ -95,12 +95,11 @@ html, body {
   position: relative;
   margin-left: 280px;
   width: calc(100% - 300px);
-  max-width: 1290px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 60px 40px;
+  padding: 60px 240px;
   box-sizing: border-box;
   gap: 25px;
   z-index: 1;
@@ -120,3 +119,4 @@ html, body {
 .card h1, .card h2, .card p {
   color: #e8ebf0;
 }
+
