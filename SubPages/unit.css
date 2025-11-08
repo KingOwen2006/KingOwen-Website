@@ -2,7 +2,7 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 40px;
-  background-color: rgba(30, 41, 59, 0.9); /* Samsung dark card background */
+  background-color: rgba(30, 41, 59, 0.9);
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   color: #e8ebf0;
@@ -64,16 +64,131 @@
   margin-bottom: 0.75em;
 }
 
+/* ---------- Image Galleries ---------- */
+
+/* 1. Vertical Gallery */
 .image-gallery-vertical {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .image-gallery-vertical img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* 2. Grouped 2x2 Grid Gallery */
+.image-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.image-gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Image + Text Pair */
+.image-text-pair {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+}
+
+.image-text-pair img {
+  width: 45%;
+  min-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.image-text-content {
+  flex: 1;
+  color: #cfd8e3;
+  font-size: 1rem;
+}
+
+.image-text-content h3 {
+  color: #f2f5fa;
+  font-size: 1.25rem;
+  margin-bottom: 0.5em;
+}
+
+ol li {
+  border-radius: 18px;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+ol li::before {
+  font-weight: 600;
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+ol li a { 
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+ol li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+ol li a:hover {
+  color: #f2f5fa;
+}
+
+.harvard-references {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 2rem auto;
+  padding-left: 2rem;
+  list-style-type: decimal; 
+  list-style-position: inside;
+}
+
+.harvard-references li {
+  margin-bottom: 1rem;
+  text-align: left; 
+}
+
+.harvard-references i {
+  font-style: italic;
+  color: #e5e5e5;
+}
+
+.harvard-references a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.harvard-references a:hover {
+  color: #f5d76e; 
+  border-color: #f5d76e;
 }
