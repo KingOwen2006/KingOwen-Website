@@ -5,10 +5,10 @@
   position: relative;
 }
 
-/* === CONTAINER STYLES (formerly "liquid glass") === */
+/* === CONTAINERS === */
 .liquid-glass-effect,
 .liquid-glass-effect2 {
-  background-color: rgba(34, 45, 63, 0.9); /* dark flat blue-gray */
+  background-color: rgba(34, 45, 63, 0.9);
   border-radius: 18px;
   display: flex;
   box-sizing: border-box;
@@ -20,7 +20,7 @@
 }
 
 .liquid-glass-effect3 {
-  background-color: rgba(34, 45, 63, 0.9); /* dark flat blue-gray */
+  background-color: rgba(34, 45, 63, 0.9);
   border-radius: 18px;
   display: flex;
   box-sizing: border-box;
@@ -97,13 +97,11 @@
   padding: 4px 20px;
   position: sticky;
   bottom: 15px;
-  text-decoration: none;
   color: #a3adc2;
 }
 
 /* === LINKS === */
-a,
-a:visited {
+a, a:visited {
   color: inherit;
   text-decoration: none;
 }
@@ -122,51 +120,37 @@ a:visited {
   transform: scale(1.05);
 }
 
-/* === TEXT GROUPING === */
-.text-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #e8ebf0;
-}
-
-/* === HEADINGS === */
-h1, h2, h3 {
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-h1 {
-  font-size: 1.875rem;
-  margin-top: 1.875rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-top: 2.5rem;
-  color: #fff;
-}
-
-h3 {
-  font-size: 1.25rem;
-  margin-top: 1.25rem;
-}
-
-/* === UNIT GRID === */
+/* === GRID === */
 .unit-links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 4 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5em;
   justify-items: center;
   align-items: start;
   margin-bottom: 2em;
 }
 
-/* individual unit boxes */
 .column {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .unit-links {
+    grid-template-columns: 1fr;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .bigtext {
+    font-size: 16px;
+  }
 }
