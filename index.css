@@ -35,7 +35,7 @@
 
 .liquid-glass-effect3 {
   flex-direction: row;    /* Image left, text right */
-  align-items: center;
+  align-items: flex-start;/* Align top of image and text */
   padding: 20px;
   gap: 20px;              /* Space between image and text */
 }
@@ -95,18 +95,17 @@
 /* === UNIT CONTENT === */
 .unit-content {
   display: flex;
-  flex-direction: row;     /* Image left, text right */
-  align-items: center;
+  align-items: flex-start;   /* Align top of image and text */
   width: 100%;
   box-sizing: border-box;
-  gap: 20px;               /* Space between image and text */
+  gap: 20px;                 /* Space between image and text */
 }
 
-/* Image box styling */
+/* Image styling */
 .unit-content img {
-  width: 120px;             /* Fixed image width */
-  height: 120px;            /* Fixed image height */
-  object-fit: cover;        /* Maintain aspect ratio */
+  width: 120px;              /* Fixed width */
+  height: 120px;             /* Fixed height */
+  object-fit: cover;         /* Crop if necessary */
   border-radius: 12px;
   transition: transform 0.3s ease;
 }
@@ -118,12 +117,11 @@
 /* Text container next to image */
 .unit-text {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;                  /* Fill remaining space */
+  flex-direction: column;    /* Stack title above description */
+  justify-content: flex-start;
 }
 
-/* Unit title and description */
+/* Unit title */
 .unit-title {
   font-size: 22px;
   font-weight: 700;
@@ -131,6 +129,7 @@
   margin-bottom: 6px;
 }
 
+/* Unit description */
 .unit-description {
   font-size: 16px;
   color: #cfd8e3;
@@ -200,7 +199,7 @@ a, a:visited {
   }
 
   .unit-content {
-    flex-direction: column;  /* Stack image on top for mobile */
+    flex-direction: column;  /* Stack image above text */
     align-items: center;
     gap: 10px;
   }
