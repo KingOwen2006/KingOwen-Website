@@ -122,43 +122,49 @@ html, body {
 
 /* === RESPONSIVE LAYOUT === */
 @media (max-width: 900px) {
-  /* Navbar fixed at bottom */
+  /* Navbar fixed at bottom (non-floating, always visible) */
   .navbar {
-    position: fixed;  /* Keep it fixed at the bottom */
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 85px; /* slightly larger */
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 0.5rem 0;
-    background: rgba(30, 41, 59, 0.9);
-    backdrop-filter: blur(10px);
+    padding: 0.75rem 0;
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(12px);
     border-radius: 18px 18px 0 0;
-    border-right: none;
+    border: none;
     border-top: 1px solid rgba(120, 144, 180, 0.15);
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.5);
     z-index: 1000;
+
+    /* Reset desktop transform so it stays at the bottom */
+    top: auto;
+    transform: none;
   }
 
   .navbar ul {
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
   }
 
   .navbar a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    font-size: 12px;
-    padding: 6px;
+    gap: 6px;
+    font-size: 14px; /* slightly larger text */
+    padding: 8px;
   }
 
   .navbar a i {
-    font-size: 18px;
+    font-size: 22px; /* slightly larger icons */
   }
 
   .navbar a.active::before {
@@ -169,6 +175,7 @@ html, body {
     margin-left: 0;
     width: 100%;
     padding: 20px;
-    padding-bottom: 80px;  /* Add extra space for the fixed navbar */
+    padding-bottom: 100px; /* ensure content not hidden behind navbar */
   }
 }
+
