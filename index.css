@@ -7,7 +7,8 @@
 
 /* === CONTAINERS === */
 .liquid-glass-effect,
-.liquid-glass-effect2 {
+.liquid-glass-effect2,
+.liquid-glass-effect3 {
   background-color: rgba(34, 45, 63, 0.9);
   border-radius: 18px;
   display: flex;
@@ -17,19 +18,8 @@
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
-}
-
-.liquid-glass-effect3 {
-  background-color: rgba(34, 45, 63, 0.9);
-  border-radius: 18px;
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  height: 200px;
-  padding: 20px 0;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  text-decoration: none; /* Remove underline for links */
+  overflow: hidden;      /* Contain child elements */
 }
 
 /* Layout variations */
@@ -46,6 +36,7 @@
 .liquid-glass-effect3 {
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
 /* === HOVER STATES === */
@@ -100,22 +91,45 @@
   color: #a3adc2;
 }
 
-/* === UNIT TEXT ELEMENTS === */
+/* === UNIT CONTENT === */
+.unit-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Image box styling */
+.unit-content img {
+  width: 100%;
+  max-width: 180px;     /* fixed box width */
+  height: 150px;        /* fixed box height */
+  object-fit: cover;    /* maintain aspect ratio, crop if necessary */
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.unit-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Unit title and description */
 .unit-title {
-  font-size: 26px;
-  font-weight: 700;      /* Bold text */
-  text-align: center;    /* Center horizontally */
-  margin: 10px 0 6px;    /* Space above and below */
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
   color: #f4f7fa;
+  margin-bottom: 6px;
 }
 
 .unit-description {
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;    /* Center text */
+  font-size: 16px;
+  text-align: center;
   color: #cfd8e3;
-  margin: 0 20px 10px;   /* Add spacing and horizontal padding */
-  line-height: 1.5;
+  line-height: 1.4;
+  padding: 0 10px;
 }
 
 /* === LINKS === */
@@ -173,10 +187,15 @@ a, a:visited {
   }
 
   .unit-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .unit-description {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .unit-content img {
+    max-width: 140px;
+    height: 120px;
   }
 }
