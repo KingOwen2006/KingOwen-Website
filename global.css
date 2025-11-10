@@ -122,9 +122,11 @@ html, body {
 
 /* === RESPONSIVE LAYOUT === */
 @media (max-width: 900px) {
-  /* Navbar becomes bottom bar, not floating anymore */
+  /* Navbar fixed at bottom */
   .navbar {
-    position: static; /* Changed from fixed to static */
+    position: fixed;  /* Keep it fixed at the bottom */
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 70px;
     flex-direction: row;
@@ -167,5 +169,6 @@ html, body {
     margin-left: 0;
     width: 100%;
     padding: 20px;
+    padding-bottom: 80px;  /* Add extra space for the fixed navbar */
   }
 }
