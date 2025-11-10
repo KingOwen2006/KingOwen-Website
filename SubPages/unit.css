@@ -10,9 +10,9 @@
   font-family: 'Inter', 'Roboto', sans-serif;
 }
 
-.page-section {
+/* .page-section {
   margin-bottom: 3em;
-}
+} */
 
 .section-title {
   font-size: 2rem;
@@ -144,3 +144,4 @@ ol li:hover {
     font-size: 0.95rem;
   }
 }
+
