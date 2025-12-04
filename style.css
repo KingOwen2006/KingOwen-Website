@@ -1,0 +1,117 @@
+/* ============================
+   1️⃣ Background: gradient + polka dots + scrolling animation
+============================ */
+tw-story {
+  background:
+    /* Polka-dot layers */
+    radial-gradient(#585955 15%, transparent 16%),
+    radial-gradient(#585955 15%, transparent 16%),
+
+    /* Base linear gradient */
+    linear-gradient(135deg, #3C3F34, #292928);
+
+  background-size:
+    40px 40px,  /* dot layer 1 */
+    40px 40px,  /* dot layer 2 */
+    cover;      /* gradient layer */
+
+  background-position:
+    0 0,        /* dot layer 1 */
+    20px 20px,  /* dot layer 2 offset */
+    center;     /* gradient layer */
+
+  background-repeat: repeat;
+
+  /* Animate only the dot layers */
+  animation: scrollDots 35s linear infinite;
+}
+
+/* Keyframes for scrolling dots */
+@keyframes scrollDots {
+  0% {
+    background-position:
+      0 0,
+      20px 20px,
+      center;
+  }
+  100% {
+    background-position:
+      0 200px,   /* first dot layer moves down */
+      20px 220px,/* second dot layer moves down */
+      center;
+  }
+}
+
+.DialogueContainer {
+  position: absolute;
+  width: 900px;
+  margin: 0 auto;
+  top: 800px;
+  left: 175px;
+}
+
+/* Main Text Box */
+.TextBox {
+  background-image: url("https://kingowen.fyi/Images/Unit4/TextBox.svg");
+  background-size: 100% 100%;
+  min-height: 203px;
+
+  /* Adjust these values until it visually lines up */
+  padding-top: 70px;     /* pushes text DOWN */
+  padding-left: 140px;   /* pushes text RIGHT */
+  padding-right: 110px;  /* avoids running into the Next box */
+  padding-bottom: 40px;
+
+  color: white;
+  font-size: 1.7em;
+  line-height: 1.3em;
+}
+
+
+/* Move the NameBox UP and LEFT */
+.NameBox {
+  position: absolute;
+  left: 180px;
+  bottom: 180px;
+
+  width: 320px;
+  height: 120px;
+
+  background-image: url("https://kingowen.fyi/Images/Unit4/NameBox.svg");
+  background-size: 100% 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  /* ✨ Align text inside the angled shape */
+  padding-left: 200px;   /* shifts text right a bit */
+
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  z-index: 1;
+}
+
+/* Move the NextBox to the BOTTOM-RIGHT */
+.NextBox {
+  position: absolute;
+  bottom: 110px;
+  right: 25px;
+
+  width: 120px;
+  height: 50px;
+
+  background-image: url("https://kingowen.fyi/Images/Unit4/NextBox.svg");
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* ✨ Align text inside the angled tag */
+  padding-top: 6px;     /* move text down */
+  padding-left: 10px;   /* move text right */
+
+  color: white;
+  font-size: 1.1em;
+}
