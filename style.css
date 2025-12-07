@@ -1,106 +1,115 @@
-/* ============================
-   1️⃣ Background: gradient + polka dots + scrolling animation
-============================ */
+/* ==========================================
+   BACKGROUND (percentage-friendly already)
+   ========================================== */
 tw-story {
   background:
-    /* Polka-dot layers */
     radial-gradient(#585955 15%, transparent 16%),
     radial-gradient(#585955 15%, transparent 16%),
-
-    /* Base linear gradient */
     linear-gradient(135deg, #3C3F34, #292928);
-
   background-size:
-    40px 40px,  /* dot layer 1 */
-    40px 40px,  /* dot layer 2 */
-    cover;      /* gradient layer */
-
+    3.1% 4.4%,
+    3.1% 4.4%,
+    cover;
   background-position:
-    0 0,        /* dot layer 1 */
-    20px 20px,  /* dot layer 2 offset */
-    center;     /* gradient layer */
-
+    0 0,
+    1.56% 2.22%,
+    center;
   background-repeat: repeat;
-
-  /* Animate only the dot layers */
   animation: scrollDots 35s linear infinite;
 }
 
-/* Keyframes for scrolling dots */
 @keyframes scrollDots {
   0% {
     background-position:
       0 0,
-      20px 20px,
+      1.56% 2.22%,
       center;
   }
   100% {
     background-position:
-      0 200px,   /* first dot layer moves down */
-      20px 220px,/* second dot layer moves down */
+      0 22.22%,
+      1.56% 24.44%,
       center;
   }
 }
 
+/* ==========================================
+   DIALOGUE UI — pixel → percentage
+   Design: 1280×900
+   ========================================== */
+
+/* DialogueContainer: 
+   width: 900px → 70.31% of 1280  
+   top: 800px → 88.88% of 900  
+   left: 175px → 13.67% of 1280  
+*/
 .DialogueContainer {
   position: absolute;
-  width: 900px;
+  width: 70.31%;
   margin: 0 auto;
-  top: 800px;
-  left: 175px;
+  top: 88.88%;
+  left: 13.67%;
 }
 
-/* Main Text Box */
+/* TextBox padding converted relative to its width (70.31% of screen) */
 .TextBox {
   background-image: url("https://kingowen.fyi/Images/Unit4/TextBox.svg");
   background-size: 100% 100%;
-  min-height: 203px;
+  min-height: 22.55%; /* 203px of 900 */
 
-  /* Adjust these values until it visually lines up */
-  padding-top: 70px;     /* pushes text DOWN */
-  padding-left: 140px;   /* pushes text RIGHT */
-  padding-right: 110px;  /* avoids running into the Next box */
-  padding-bottom: 40px;
+  padding-top: 7.77%;   /* 70 / 900 */
+  padding-left: 13%; /* 140 / 1280 */
+  padding-right: 8.59%; /* 110 / 1280 */
+  padding-bottom: 4.44%; /* 40 / 900 */
 
   color: white;
   font-size: 1.7em;
   line-height: 1.3em;
 }
 
-
-/* Move the NameBox UP and LEFT */
+/* NameBox:
+   left: 180px → 14.06%
+   bottom: 180px → 20%
+   width: 320px → 25%
+   height: 120px → 13.33%
+   padding-left: 200px → 15.62%
+*/
 .NameBox {
   position: absolute;
-  left: 180px;
-  bottom: 180px;
+  left: 26%;
+  top: 26%;
 
-  width: 320px;
-  height: 120px;
+  width: 28%;
+  height: 15%;
 
   background-image: url("https://kingowen.fyi/Images/Unit4/NameBox.svg");
   background-size: 100% 100%;
   display: flex;
-
   justify-content: center;
   align-items: center;
 
-  /* ✨ Align text inside the angled shape */
-  padding-left: 200px;   /* shifts text right a bit */
+  padding-left: 15.62%;
 
   color: white;
-  font-size: 1.5em;
+  font-size: 0.75em;
   line-height: 1.2em;
   z-index: 1;
 }
 
-/* Move the NextBox to the BOTTOM-RIGHT */
+/* NextBox:
+   bottom: 110px → 12.22%
+   right: 25px → 1.95%
+   width: 120px → 9.375%
+   height: 50px → 5.55%
+   padding-left: 10px → 0.78%
+*/
 .NextBox {
   position: absolute;
-  bottom: 110px;
-  right: 25px;
+  bottom: 37%;
+  right: 10%;
 
-  width: 120px;
-  height: 50px;
+  width: 9.375%;
+  height: 5.55%;
 
   background-image: url("https://kingowen.fyi/Images/Unit4/NextBox.svg");
   background-size: 100% 100%;
@@ -108,10 +117,9 @@ tw-story {
   justify-content: center;
   align-items: center;
 
-  /* ✨ Align text inside the angled tag */
-  padding-top: 6px;     /* move text down */
-  padding-left: 10px;   /* move text right */
+  padding-top: 0.66%;  /* 6 / 900 */
+  padding-left: 0.78%; /* 10 / 1280 */
 
   color: white;
-  font-size: 1.1em;
+  font-size: 0.8em;
 }
