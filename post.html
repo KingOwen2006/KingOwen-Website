@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <header class="top-nav">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  
+  <div class="app">
+  
+  <aside class="sidebar">
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+      <a href="blog.html" class="active"><i class="fa-solid fa-newspaper"></i>Blog</a>
+      <a href="#"><i class="fa-solid fa-th"></i>Projects</a>
+      <a href="#"><i class="fa-solid fa-user"></i>Contact</a>
+    </nav>
+  </aside>
+
+<main class="content">
+  <a href="blog.html" class="back-link">← Back to News</a>
+  <article id="post"></article>
+</main>
+
+</div>
+
+<script>
+const id = new URLSearchParams(window.location.search).get("id");
+
+fetch(`https://public-api.wordpress.com/wp/v2/sites/kingowenfyi.wordpress.com/posts/${id}`)
+  .then(r => r.json())
+  .then(p => {
+    document.getElementById("post").innerHTML = `
+      <h1>${p.title.rendered}</h1>
+      <div class="post-content">${p.content.rendered}</div>
+    `;
+  });
+</script>
+
+</body>
+</html>

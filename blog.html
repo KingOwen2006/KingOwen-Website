@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <header class="top-nav">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  
+  <div class="app">
+  
+  <aside class="sidebar">
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+      <a href="blog.html" class="active"><i class="fa-solid fa-newspaper"></i>Blog</a>
+      <a href="#"><i class="fa-solid fa-th"></i>Projects</a>
+      <a href="#"><i class="fa-solid fa-user"></i>Contact</a>
+    </nav>
+  </aside>
+
+<main class="content">
+  <h1>News</h1>
+  <section id="posts" class="posts-grid"></section>
+</main>
+
+</div>
+
+<script>
+fetch("https://public-api.wordpress.com/wp/v2/sites/kingowenfyi.wordpress.com/posts?_embed")
+  .then(r => r.json())
+  .then(posts => {
+    document.getElementById("posts").innerHTML = posts.map(p => {
+      const img = p._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "";
+      return `
+        <a href="post.html?id=${p.id}" class="post-card">
+          ${img ? `<img src="${img}">` : ""}
+          <h3>${p.title.rendered}</h3>
+          <p>${p.excerpt.rendered.replace(/<[^>]+>/g,"")}</p>
+          <span>Read more →</span>
+        </a>
+      `;
+    }).join("");
+  });
+</script>
+
+</body>
+</html>
